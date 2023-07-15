@@ -51,14 +51,10 @@ class EvilProxy::HTTPProxyServer < WEBrick::HTTPProxyServer
   end
 
   def service req, res
-    p "EVIL - 1"
     fire :before_request, req
-    p "EVIL - 2"
     super
   ensure
-    p "EVIL - 3"
     fire :before_response, req, res
-    p "EVIL - 4"
   end
 
   def self.define_callback_methods callback
