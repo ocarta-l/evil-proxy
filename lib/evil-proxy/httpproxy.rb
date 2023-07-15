@@ -55,6 +55,7 @@ class EvilProxy::HTTPProxyServer < WEBrick::HTTPProxyServer
     fire :before_request, req
     p "EVIL - 2"
     super
+  ensure
     p "EVIL - 3"
     fire :before_response, req, res
     p "EVIL - 4"
