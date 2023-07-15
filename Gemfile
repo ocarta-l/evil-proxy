@@ -6,7 +6,7 @@ gemspec
 gem 'activesupport'
 gem 'colorize'
 gem 'pry-byebug'
-gem 'webrick'
+gem 'webrick', "~> 1.3"
 
 group :test do
   gem 'rest-client', '~> 2.0'
